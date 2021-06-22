@@ -8,18 +8,19 @@
           <div class="item">
             <img src= <?php echo get_template_directory_uri()."/assets/images/banner-item-01.jpg"?> alt="">
             <div class="item-content">
-              <div class="main-content">
+                <div class="main-content">        
+
                 <div class="meta-category">
-                  <span>Fashion</span>
+                    <span>Fashion</span>
                 </div>
                 <a href="post-details.html"><h4>Morbi dapibus condimentum</h4></a>
                 <ul class="post-info">
-                  <li><a href="#">Admin</a></li>
-                  <li><a href="#">May 12, 2020</a></li>
-                  <li><a href="#">12 Comments</a></li>
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">May 12, 2020</a></li>
+                    <li><a href="#">12 Comments</a></li>
                 </ul>
-              </div>
-            </div>
+                </div>
+            </div>            
           </div>
 
           <div class="item">
@@ -112,8 +113,6 @@
     <!-- Banner Ends Here -->
     
     
-
-
     <section class="blog-posts">
       <div class="container">
         <div class="row">
@@ -127,13 +126,11 @@
                             <?php get_template_part('template_parts/post') ?>            
                       <?php endwhile; ?>
                     <?php endif; ?>
-                    <?php var_dump(have_posts()) ?>
                 </div>
                 
-
                 <div class="col-lg-12">
                   <div class="main-button">
-                    <a href="blog.html">View All Posts</a>
+                    <a href="<?php home_url() ?>">View All Posts</a>
                   </div>
                 </div>
               </div>
