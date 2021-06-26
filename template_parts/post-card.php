@@ -1,12 +1,10 @@
-<div class="blog-post">
+<div class="blog-thumb">
+    <?php if(has_post_thumbnail()): ?>
+        <?php the_post_thumbnail('medium', array('class'=>'thumb')); ?>
+    <?php endif; ?>  
+</div>
 
-    <div class="blog-thumb">
-        <?php if(has_post_thumbnail()): ?>
-            <?php the_post_thumbnail('large', array('class'=>'post-thumb')); ?>
-        <?php endif; ?>
-    </div>
-
-    <div class="down-content">
+<div class="down-content">
         <span><?php the_category() ?></span>
         <a href="<?php the_permalink(); ?>"><h4><?php the_title() ?></h4></a>
         <div class="post--excerpt"><?php the_excerpt(); ?></div>
@@ -24,18 +22,9 @@
                         <?php the_tags( '', ', ', '' ) ?>                
                     </ul>
                 </div>
-                <div class="col-6">
-                    <ul class="post-share">
-                        <li><i class="fa fa-share-alt"></i></li>
-                        <li><a href="#">Facebook</a>,</li>
-                        <li><a href="#"> Twitter</a></li>
-                    </ul>
-                </div>
+                
             </div>
         </div>
     </div>
     
 </div>
-
-
-                
